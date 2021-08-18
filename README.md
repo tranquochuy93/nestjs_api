@@ -71,3 +71,11 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Life cycle
+Middleware -> Guards -> Interceptors (code before next.handle()) -> Pipes -> Route Handler -> Interceptors (eg: next.handle().pipe( tap(() => changeResponse()) ) )-> Exception Filter (if exception is thrown)
+## Microservices
+1. TCP Layer
+2. request-response: exchange messages between services
+- 
+3. event-based: we don’t want to wait for a response.
